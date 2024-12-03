@@ -24,7 +24,11 @@ router.get("/:id", (req, res) => {
     res.json("Sono show" + postId)
 })
 
-//delete
+//destroy
+router.delete("/:id", (req, res) => {
+    const postId = req.params.id;
+    res.json("sono delete" + postId)
+})
 
 
 module.exports = router;
