@@ -13,7 +13,7 @@ router.post("/", (req, res) => {
 })
 
 // update
-router.patch("/:id", (req, res) => {
+router.put("/:id", (req, res) => {
     const postId = req.params.id;
     res.json("Sono l'elemento modificato" + postId)
 })
@@ -23,5 +23,8 @@ router.get("/:id", (req, res) => {
     const postId = req.params.id;
     res.json("Sono show" + postId)
 })
+
+//delete
+
 
 module.exports = router;
