@@ -18,5 +18,10 @@ router.patch("/:id", (req, res) => {
     res.json("Sono l'elemento modificato" + postId)
 })
 
+//show
+router.get("/:id", (req, res) => {
+    const postId = req.params.id;
+    res.json("Sono show" + postId)
+})
 
 module.exports = router;
