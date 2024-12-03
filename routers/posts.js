@@ -4,7 +4,7 @@ const postslist = require("../data");
 
 // index
 router.get("/", (req, res) => {
-    res.json("Sono index");
+    res.json(postslist);
 });
 
 // create
