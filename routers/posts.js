@@ -21,7 +21,13 @@ router.put("/:id", (req, res) => {
 //show
 router.get("/:id", (req, res) => {
     const postId = req.params.id;
-    res.json("Sono show" + postId)
+    for (let i = 0; i < postslist.length; i++) {
+        const curpost = postslist[i];
+        console.log(curpost);
+        if (curpost.id === postId) {
+           res.json(curpost) 
+        }
+    }
 })
 
 //destroy
